@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    不透明度百分比对照表 00表示完全透明能看到背景，FF表示完全不透明就是当前view的颜色-->
+    <!--    100% — FF-->
+    <!--    99% — FC-->
+    <!--    98% — FA-->
+    <!--    97% — F7-->
+    <!--    96% — F5-->
+    <!--    95% — F2-->
+    <!--    94% — F0-->
+    <!--    93% — ED-->
+    <!--    92% — EB-->
+    <!--    91% — E8-->
+    <!--    90% — E6-->
+    <!--    89% — E3-->
+    <!--    88% — E0-->
+    <!--    87% — DE-->
+    <!--    86% — DB-->
+    <!--    85% — D9-->
+    <!--    84% — D6-->
+    <!--    83% — D4-->
+    <!--    82% — D1-->
+    <!--    81% — CF-->
+    <!--    80% — CC-->
+    <!--    79% — C9-->
+    <!--    78% — C7-->
+    <!--    77% — C4-->
+    <!--    76% — C2-->
+    <!--    75% — BF-->
+    <!--    74% — BD-->
+    <!--    73% — BA-->
+    <!--    72% — B8-->
+    <!--    71% — B5-->
+    <!--    70% — B3-->
+    <!--    69% — B0-->
+    <!--    68% — AD-->
+    <!--    67% — AB-->
+    <!--    66% — A8-->
+    <!--    65% — A6-->
+    <!--    64% — A3-->
+    <!--    63% — A1-->
+    <!--    62% — 9E-->
+    <!--    61% — 9C-->
+    <!--    60% — 99-->
+    <!--    59% — 96-->
+    <!--    58% — 94-->
+    <!--    57% — 91-->
+    <!--    56% — 8F-->
+    <!--    55% — 8C-->
+    <!--    54% — 8A-->
+    <!--    53% — 87-->
+    <!--    52% — 85-->
+    <!--    51% — 82-->
+    <!--    50% — 80-->
+    <!--    49% — 7D-->
+    <!--    48% — 7A-->
+    <!--    47% — 78-->
+    <!--    46% — 75-->
+    <!--    45% — 73-->
+    <!--    44% — 70-->
+    <!--    43% — 6E-->
+    <!--    42% — 6B-->
+    <!--    41% — 69-->
+    <!--    40% — 66-->
+    <!--    39% — 63-->
+    <!--    38% — 61-->
+    <!--    37% — 5E-->
+    <!--    36% — 5C-->
+    <!--    35% — 59-->
+    <!--    34% — 57-->
+    <!--    33% — 54-->
+    <!--    32% — 52-->
+    <!--    31% — 4F-->
+    <!--    30% — 4D-->
+    <!--    29% — 4A-->
+    <!--    28% — 47-->
+    <!--    27% — 45-->
+    <!--    26% — 42-->
+    <!--    25% — 40-->
+    <!--    24% — 3D-->
+    <!--    23% — 3B-->
+    <!--    22% — 38-->
+    <!--    21% — 36-->
+    <!--    20% — 33-->
+    <!--    19% — 30-->
+    <!--    18% — 2E-->
+    <!--    17% — 2B-->
+    <!--    16% — 29-->
+    <!--    15% — 26-->
+    <!--    14% — 24-->
+    <!--    13% — 21-->
+    <!--    12% — 1F-->
+    <!--    11% — 1C-->
+    <!--    10% — 1A-->
+    <!--    9% — 17-->
+    <!--    8% — 14-->
+    <!--    7% — 12-->
+    <!--    6% — 0F-->
+    <!--    5% — 0D-->
+    <!--    4% — 0A-->
+    <!--    3% — 08-->
+    <!--    2% — 05-->
+    <!--    1% — 03-->
+    <!--    0% — 00-->
+    <color name="black_10">#1a000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_90">#e6000000</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_85">#D9FFFFFF</color>
+    <color name="white_45">#73FFFFFF</color>
+    <color name="color_b1b">#ffb1b1b3</color>
+    <color name="color_aff">#0AFFB600</color>
+    <color name="color_ff5">#0FFF5F33</color>
+    <color name="color_a60">#A6000000</color>
+    <color name="color_000">#00000000</color>
+    <color name="color_d9f">#D9FFFFFF</color>
+    <color name="color_d90">#D9000000</color>
+    <color name="color_730">#73000000</color>
+    <color name="color_993">#993C3C43</color>
+    <color name="color_f0c">#fffff0cc</color>
+    <color name="color_fcf">#ffffcfc1</color>
+    <color name="color_fdf">#ffffdfd6</color>
+    <color name="color_fe2">#ffe2c9ff</color>
+    <color name="color_fe6">#FFE6E6E6</color>
+    <color name="color_fbf">#ffffbfad</color>
+    <color name="color_fd9">#ffd9b8ff</color>
+    <color name="color_f5f">#ffff5f33</color>
+    <color name="color_330">#33000000</color>
+    <color name="color_a6f">#a6ffffff</color>
+    <color name="color_fb6">#ffffb600</color>
+    <color name="color_e8e9eb">#E8E9EB</color>
+    <color name="color_0dffffff">#0dffffff</color>
+    <color name="color_ff333a">#FF333A</color>
+    <color name="color_ff5f33">#FF5F33</color>
+    <color name="color_cc000000">#cc000000</color>
+    <color name="color_99000000">#99000000</color>
+    <color name="color_d8d8d8">#d8d8d8</color>
+    <color name="color_fef">#ffffefea</color>
+    <color name="color_fb3">#FFB3B3B3</color>
+    <color name="color_0a0">#0A000000</color>
+    <color name="color_262">#FF262626</color>
+    <!-- App 样式中引用的颜色 -->
+    <color name="app_bg">@color/white</color>
+    <color name="common_primary_color">@color/white</color>
+    <color name="common_primary_dark_color">@color/black</color>
+    <color name="common_accent_color">#5A8DDF</color>
+    <color name="common_window_background_color">#F4F4F4</color>
+    <color name="common_text_color">#333333</color>
+    <color name="common_text_hint_color">@color/panda</color>
+
+    <!-- 熊猫色（黑白背景通吃） -->
+    <color name="panda">#FF757575</color>
+    <!-- 透明色 -->
+    <color name="transparent">#00000000</color>
+    <!--    //player -->
+    <color name="common_txt_color">#FFFFFFFF</color>
+    <color name="build_group_navi_chat_txt_color">#FFFFFFFF</color>
+    <color name="build_group_navi_summary_txt_color">#FF000000</color>
+    <color name="build_group_room_label_txt_color">#FF000000</color>
+    <color name="build_group_dm_label_tag_txt_color">#FFFFFFFF</color>
+    <color name="build_group_dm_label_tips_txt_color">#CCffffff</color>
+
+    <color name="build_group_host_label_role_txt_color">#FFFFFFFF</color>
+    <color name="build_group_host_label_role_tip_txt_color">#4d000000</color>
+    <color name="build_group_host_label_ready_txt_color">#FFB600</color>
+    <color name="build_group_host_label_cancel_txt_color">#FFffffff</color>
+    <color name="build_group_common_player_label_txt_color">#000000</color>
+    <color name="build_group_member_in_role_label_txt_color">#000000</color>
+    <color name="build_group_member_in_no_select_txt_color">#80000000</color>
+    <color name="build_group_member_in_selected_txt_color">#000000</color>
+    <color name="build_group_member_in_preparing_txt_color">#66000000</color>
+    <color name="build_group_member_in_ready_txt_color">#000000</color>
+    <color name="build_group_chat_end_txt_color">#CCffffff</color>
+
+    <color name="build_group_member_no_in_txt_color">#000000</color>
+    <color name="build_group_public_chat_sheet_me_txt_color">#FFB600</color>
+    <color name="build_group_public_chat_sheet_dm_txt_color">#FFFFFFFF</color>
+    <color name="build_group_public_chat_sheet_player_txt_color">#BAF7F5</color>
+    <color name="build_group_public_chat_recorder_edit_bg_color">#000000</color>
+    <color name="build_group_public_chat_recorder_edit_hint_text_color">#66ffffff</color>
+    <color name="build_group_voice_chat_tips_txt_color">#FFFFFFFF</color>
+    <color name="build_group_voice_chat_bg">#B3000000</color>
+    <color name="build_group_role_pop_item_role_name_txt_color">#000000</color>
+    <color name="build_group_role_pop_item_role_desc_txt_color">#000000</color>
+    <color name="build_group_role_pop_item_role_btn_select_txt_color">#FFB600</color>
+    <color name="build_group_role_pop_item_role_btn_selected_txt_color">#FFFFFF</color>
+    <color name="build_group_role_pop_item_role_btn_cancel_txt_color">#000000</color>
+
+    <color name="play_page_script_name_txt_color">#000000</color>
+    <color name="play_page_chapter_txt_color">#000000</color>
+    <color name="play_page_dm_chapter_txt_color">#FFFFFFFF</color>
+    <color name="play_page_dm_remain_time_txt_color">#FFFFB600</color>
+    <color name="play_page_dm_remain_business_title_color">#CCFFFFFF</color>
+    <color name="play_page_dm_remain_business_label_txt_color">#66FFFFFF</color>
+    <color name="play_page_dm_remain_business_price_txt_color">#FFFF5F33</color>
+    <color name="play_page_end_game_txt_color">#FFFFFFFF</color>
+    <color name="play_page_common_txt_color">#FFFFFFFF</color>
+    <color name="play_page_common_title_txt_color">#000000</color>
+    <color name="play_page_common_content_txt_color">#000000</color>
+    <color name="build_group_navi_script_txt_color">#FFFFFFFF</color>
+
+    <color name="play_page_common_3_header_txt_color">#FFFFFFFF</color>
+    <color name="play_page_common_3_header_txt_gray_color">#99FFFFFF</color>
+    <color name="play_page_common_clue_detail_clue_name_txt_color">#FFFFFFFF</color>
+    <color name="play_page_common_clue_detail_btn_more_txt_color">#FFFF5F33</color>
+    <color name="play_page_common_clue_detail_clue_desc_txt_color">#99FFFFFF</color>
+    <color name="play_page_common_clue_detail_bnt_share_txt_color">#FFFFB600</color>
+    <color name="play_page_common_clue_select_txt_color">#FF000000</color>
+    <color name="play_page_common_remain_ticket_txt_color">#FFFF5F33</color>
+    <color name="play_page_common_require_ticket_most_txt_color">#FFFFB600</color>
+    <color name="play_page_common_require_ticket_nor_txt_color">#FFFFFFFF</color>
+    <color name="play_page_common_last_score_txt_color">#FF000000</color>
+    <color name="play_page_common_last_score_num_txt_color">#FFFF5E32</color>
+    <color name="play_page_common_score_page_txt_color">#FF000000</color>
+    <color name="play_page_common_score_page_score_txt_color">#FFFFFFFF</color>
+    <color name="play_page_common_comment_commit_txt_color">#FFFFB600</color>
+    <color name="play_page_common_comment_com_txt_color">#FFFFFFFF</color>
+    <color name="play_page_common_comment_com_tip_txt_color">#FFFF5F33</color>
+    <color name="play_page_common_comment_com_hint_color">#66ffffff</color>
+    <color name="play_page_common_extract_count_color">#FFFF5F33</color>
+    <color name="play_page_common_task_dec_color">#FF000000</color>
+    <color name="play_page_common_task_award_color">#FFFFFFFF</color>
+    <color name="play_page_common_research_txt_nor_color">#FFFFFFFF</color>
+    <color name="play_page_common_research_txt_selected_color">#FFFFB600</color>
+    <color name="play_page_dm_change_role_txt_color">#99FFFFFF</color>
+    <color name="play_page_dm_common_back_txt_color">#FF000000</color>
+    <color name="play_page_dm_common_clue_prop_btn_txt_color">#FFFFB600</color>
+    <color name="play_page_dm_common_clue_prop_cancel_txt_color">#FFFFFFFF</color>
+    <color name="play_page_dm_common_clue_prop_business_tips_txt_color">#FFFFB600</color>
+    <color name="play_page_dm_vote_no_topic_txt_color">#66000000</color>
+    <color name="play_page_dm_vote_label_txt_color">#99FFFFFF</color>
+    <color name="play_page_dm_segment_divider_color">#FF4D4D4D</color>
+
+    <color name="uncompleted_color">#A3E0D9</color>
+    <color name="completed_txt_color">#66FFFFFF</color>
+    <color name="going_txt_color">#FFFFB600</color>
+    <color name="ticket_num_max">#FFFFB600</color>
+    <color name="uncompleted_text_color">#FFFFFFFF</color>
+    <color name="uncompleted_tip_color">#FFFF5F33</color>
+</resources>

@@ -1,0 +1,174 @@
+import org.aspectj.bridge.IMessage
+import org.aspectj.bridge.MessageHandler
+import org.aspectj.tools.ajc.Main
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        def classPathDependencies = rootProject.ext.classPathDependencies
+        classpath classPathDependencies.aspectjtools
+        classpath classPathDependencies.aspectjweaver
+    }
+}
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    namespace 'com.android.mvpdagger'
+    compileSdk globalConfiguration.getAt("androidCompileSdkVersion")
+
+    defaultConfig {
+        applicationId "com.android.mvpdagger"
+        minSdk globalConfiguration.getAt("androidMinSdkVersion")
+        targetSdk globalConfiguration.getAt("androidTargetSdkVersion")
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    dataBinding {
+        enabled = true
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+dependencies {
+
+    implementation project(":CommonLib")
+    implementation project(':domain')
+    implementation project(':data')
+    def mvpDaggerDependencies = rootProject.ext.mvpDaggerDependencies
+
+
+    kapt mvpDaggerDependencies.daggerCompiler
+    implementation mvpDaggerDependencies.dagger
+    api mvpDaggerDependencies.dagger_android
+    api mvpDaggerDependencies.dagger_android_support
+    kapt mvpDaggerDependencies.dagger_android_processor
+
+    implementation mvpDaggerDependencies.butterKnife
+    kapt mvpDaggerDependencies.butterKnife
+    kapt mvpDaggerDependencies.butterknife_compiler
+
+    implementation mvpDaggerDependencies.recyclerView
+    implementation mvpDaggerDependencies.rxJava
+    implementation mvpDaggerDependencies.rxAndroid
+
+    compileOnly mvpDaggerDependencies.javaxAnnotation
+
+    implementation mvpDaggerDependencies.androidx_core
+    implementation mvpDaggerDependencies.viewPager2
+    implementation mvpDaggerDependencies.aspectjrt
+
+    implementation mvpDaggerDependencies.android_core_ktx
+    implementation mvpDaggerDependencies.appcompat
+    implementation mvpDaggerDependencies.material
+    implementation mvpDaggerDependencies.constraintlayout
+    implementation mvpDaggerDependencies.navigation_fragment_ktx
+    implementation mvpDaggerDependencies.navigation_ui_ktx
+    implementation mvpDaggerDependencies.navigation_ui
+    implementation mvpDaggerDependencies.navigation_runtime
+
+    // Kotlin
+    implementation mvpDaggerDependencies.kotlin_stdlib
+
+    // 协程核心库
+    implementation mvpDaggerDependencies.kotlinx_coroutines_core
+    // 协程Android支持库
+    implementation mvpDaggerDependencies.kotlinx_coroutines_android
+    // 协程Java8支持库
+    implementation mvpDaggerDependencies.kotlinx_coroutines_jdk8
+
+    // lifecycle对于协程的扩展封装
+    implementation mvpDaggerDependencies.lifecycle_viewmodel_ktx
+    implementation mvpDaggerDependencies.lifecycle_runtime_ktx
+    implementation mvpDaggerDependencies.lifecycle_livedata_ktx
+    implementation mvpDaggerDependencies.lifecycle_runtime
+    implementation mvpDaggerDependencies.lifecycle_common_java8
+
+
+
+    implementation mvpDaggerDependencies.lifecycle_viewmodel
+    implementation mvpDaggerDependencies.lifecycle_livedata
+    api mvpDaggerDependencies.unpeek_livedata
+    api mvpDaggerDependencies.strict_databinding
+    implementation mvpDaggerDependencies.rxbinding
+
+    kapt mvpDaggerDependencies.kotlinx_metadata_jvm
+
+    def testDependencies = rootProject.ext.TestDependencies
+    testImplementation testDependencies.junit
+    testImplementation testDependencies.assertj
+    testImplementation testDependencies.mockito
+    testImplementation testDependencies.robolectric
+    testImplementation testDependencies.espresso
+
+    //Development
+    def developmentDependencies = rootProject.ext.developmentDependencies
+    implementation developmentDependencies.leakCanary
+}
+
+
+final def log1 = project.logger
+final def variants = project.android.applicationVariants
+
+variants.all { variant ->
+    if (!variant.buildType.isDebuggable()) {
+        log1.debug("Skipping non-debuggable build type '${variant.buildType.name}'.")
+        return;
+    }
+
+    JavaCompile javaCompile = variant.javaCompile
+    javaCompile.doLast {
+        String[] args = ["-showWeaveInfo",
+                         "-1.8",
+                         "-inpath", javaCompile.destinationDir.toString(),
+                         "-aspectpath", javaCompile.classpath.asPath,
+                         "-d", javaCompile.destinationDir.toString(),
+                         "-classpath", javaCompile.classpath.asPath,
+                         "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
+        log1.debug "ajc args: " + Arrays.toString(args)
+
+        MessageHandler handler = new MessageHandler(true);
+        new Main().run(args, handler);
+        for (IMessage message : handler.getMessages(null, true)) {
+            switch (message.getKind()) {
+                case IMessage.ABORT:
+                case IMessage.ERROR:
+                case IMessage.FAIL:
+                    log1.error message.message, message.thrown
+                    break;
+                case IMessage.WARNING:
+                    log1.warn message.message, message.thrown
+                    break;
+                case IMessage.INFO:
+                    log1.info message.message, message.thrown
+                    break;
+                case IMessage.DEBUG:
+                    log1.debug message.message, message.thrown
+                    break;
+            }
+        }
+    }
+}

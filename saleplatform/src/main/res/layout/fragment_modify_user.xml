@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    tools:context=".ui.order.OrderFragment">
+
+    <TextView
+        android:id="@+id/text_address_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:background="@color/white"
+        android:singleLine="true"
+        android:text="修改用户"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp_28"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_back"
+        android:layout_width="@dimen/dp_32"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_8"
+        android:background="@drawable/back_chevron"
+        app:layout_constraintBottom_toBottomOf="@id/text_address_goods"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/text_address_goods" />
+
+    <LinearLayout
+        android:id="@+id/ly_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@drawable/bg_line_3336dff_ff9ffd2ff"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_8"
+        app:layout_constraintTop_toBottomOf="@id/text_address_goods">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名称"></TextView>
+
+        <EditText
+            android:id="@+id/text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:background="@drawable/bg_line_white"
+            android:padding="@dimen/dp_6"
+            android:textAlignment="center"
+            android:textSize="@dimen/dp_20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@drawable/bg_line_3336dff_ff9ffd2ff"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_8"
+        app:layout_constraintTop_toBottomOf="@id/ly_name">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详细地址"></TextView>
+
+        <EditText
+            android:background="@drawable/bg_line_white"
+            android:id="@+id/text_room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:padding="@dimen/dp_6"
+            android:textAlignment="center"
+            android:textSize="@dimen/dp_20" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ly_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@drawable/bg_line_3336dff_ff9ffd2ff"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_8"
+        app:layout_constraintTop_toBottomOf="@id/ly_room">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总金额"></TextView>
+
+        <EditText
+            android:background="@drawable/bg_line_white"
+            android:id="@+id/text_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:inputType="number"
+            android:padding="@dimen/dp_6"
+            android:textAlignment="center"
+            android:textSize="@dimen/dp_20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_count_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@drawable/bg_line_3336dff_ff9ffd2ff"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_8"
+        app:layout_constraintTop_toBottomOf="@id/ly_count">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备注"></TextView>
+
+        <EditText
+            android:background="@drawable/bg_line_white"
+            android:id="@+id/text_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:padding="@dimen/dp_6"
+            android:textAlignment="center"
+            android:textSize="@dimen/dp_20" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ly_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@drawable/bg_line_3336dff_ff9ffd2ff"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_8"
+        app:layout_constraintTop_toBottomOf="@id/ly_count_desc">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否付款"></TextView>
+
+        <CheckBox
+            android:id="@+id/good_status_payed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/payed"
+            android:textSize="@dimen/dp_20" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_modify_status"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_36"
+        android:background="@drawable/bg_line_3336dff_ff9ffd2ff"
+        android:gravity="center"
+        android:text="修改"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@id/ly_pay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

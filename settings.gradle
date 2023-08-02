@@ -1,0 +1,7 @@
+include ':app'
+
+include ':CommonLib'
+include ':mvpdagger'
+include ':domain'
+include ':data'
+include ':saleplatform'

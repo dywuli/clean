@@ -1,0 +1,198 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "21.1.2"
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 32
+    androidCompileSdkVersion = 33
+
+    //Libraries
+    daggerVersion = '2.32'
+    daggerAndroidVersion = '2.28.1'
+    butterKnifeVersion = '10.1.0'
+    recyclerViewVersion = '1.3.0'
+    rxJavaVersion = '2.0.2'
+    rxAndroidVersion = '2.0.1'
+    javaxAnnotationVersion = '1.0'
+    javaxInjectVersion = '1'
+    gsonVersion = '2.3'
+    okHttpVersion = '2.5.0'
+    androidAnnotationsVersion = '25.4.0'
+    arrowVersion = '1.0.0'
+
+    //Testing
+    robolectricVersion = '3.1.1'
+    jUnitVersion = '4.12'
+    assertJVersion = '1.7.1'
+    mockitoVersion = '1.9.5'
+    dexmakerVersion = '1.0'
+    espressoVersion = '3.0.1'
+    testingSupportLibVersion = '0.1'
+
+    androidCoreVersion = '1.9.0'
+
+    viewPagerVersion = '1.0.0'
+
+    aspectVersion = "1.9.19"
+    aspectjrtVersion = "1.8.1"
+
+    appcompatVersion = '1.5.1'
+    materialVersion = '1.7.0'
+    constraintLayoutVersion = '2.1.4'
+    navigationVersion = '2.4.2'
+    navigationKtVersion = '2.5.3'
+
+    kotlinxCoroutinesVersion = '1.4.3'
+    kotlinStdlibVersion = '1.4.3'
+
+    lifecycleKtVersion = '2.2.0'
+    lifecycleVersion = '2.3.1'
+
+    unPeekLivedataVersion = '7.2.0-beta1'
+    strictDataBindingVersion = '4.0.0-beta1'
+    rxBindingVersion = '4.0.0'
+    kotlinxMetadataJvmVersion = '0.5.0'
+    //Development
+    leakCanaryVersion = '2.9.1'
+
+    //third libs
+    recyclerViewAdapterHelperVersion = "3.0.4"
+    room_version = "2.4.3"
+
+    presentationDependencies = [
+            daggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger                  : "com.google.dagger:dagger:${daggerVersion}",
+            dagger_android          : "com.google.dagger:dagger-android:${daggerAndroidVersion}",
+            dagger_android_support  : "com.google.dagger:dagger-android-support:${daggerAndroidVersion}",
+            dagger_android_processor: "com.google.dagger:dagger-android-processor:${daggerAndroidVersion}",
+            butterKnife             : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            recyclerView            : "androidx.recyclerview:recyclerview:${recyclerViewVersion}",
+            rxJava                  : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid               : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation         : "javax.annotation:jsr250-api:${javaxAnnotationVersion}"
+    ]
+
+
+    domainDependencies = [
+            javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject    : "javax.inject:javax.inject:${javaxInjectVersion}",
+            rxJava         : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            arrow          : "com.fernandocejas:arrow:${arrowVersion}"
+    ]
+
+
+    dataDependencies = [
+            daggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger                  : "com.google.dagger:dagger:${daggerVersion}",
+            dagger_android          : "com.google.dagger:dagger-android:${daggerAndroidVersion}",
+            dagger_android_support  : "com.google.dagger:dagger-android-support:${daggerAndroidVersion}",
+            dagger_android_processor: "com.google.dagger:dagger-android-processor:${daggerAndroidVersion}",
+            okHttp                  : "com.squareup.okhttp:okhttp:${okHttpVersion}",
+            gson                    : "com.google.code.gson:gson:${gsonVersion}",
+            rxJava                  : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid               : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation         : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject             : "javax.inject:javax.inject:${javaxInjectVersion}",
+            androidAnnotations      : "com.android.support:support-annotations:${androidAnnotationsVersion}"
+    ]
+
+
+    TestDependencies = [
+            junit      : "junit:junit:${jUnitVersion}",
+            assertj    : "org.assertj:assertj-core:${assertJVersion}",
+            mockito    : "org.mockito:mockito-core:${mockitoVersion}",
+            robolectric: "org.robolectric:robolectric:${robolectricVersion}",
+            espresso   : "com.android.support.test.espresso:espresso-core:${espressoVersion}",
+    ]
+
+    commonLibDependencies = [
+            daggerCompiler          : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger                  : "com.google.dagger:dagger:${daggerVersion}",
+            dagger_android          : "com.google.dagger:dagger-android:${daggerAndroidVersion}",
+            dagger_android_support  : "com.google.dagger:dagger-android-support:${daggerAndroidVersion}",
+            dagger_android_processor: "com.google.dagger:dagger-android-processor:${daggerAndroidVersion}",
+            butterKnife             : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            recyclerView            : "androidx.recyclerview:recyclerview:${recyclerViewVersion}",
+            rxJava                  : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid               : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation         : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            androidx_core           : "androidx.core:core:${viewPagerVersion}",
+            viewPager2              : "androidx.viewpager2:viewpager2:${viewPagerVersion}",
+            aspectjrt               : "org.aspectj:aspectjrt:${aspectjrtVersion}",
+
+    ]
+
+    mvpDaggerDependencies = [
+            daggerCompiler            : "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger                    : "com.google.dagger:dagger:${daggerVersion}",
+            dagger_android            : "com.google.dagger:dagger-android:${daggerAndroidVersion}",
+            dagger_android_support    : "com.google.dagger:dagger-android-support:${daggerAndroidVersion}",
+            dagger_android_processor  : "com.google.dagger:dagger-android-processor:${daggerAndroidVersion}",
+            butterKnife               : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            butterknife_compiler      : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            recyclerView              : "androidx.recyclerview:recyclerview:${recyclerViewVersion}",
+            rxJava                    : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxAndroid                 : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation           : "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            androidx_core             : "androidx.core:core:${androidCoreVersion}",
+            viewPager2                : "androidx.viewpager2:viewpager2:${viewPagerVersion}",
+            aspectjrt                 : "org.aspectj:aspectjrt:${aspectjrtVersion}",
+
+
+            android_core_ktx          : "androidx.core:core-ktx:${androidCoreVersion}",
+            appcompat                 : "androidx.appcompat:appcompat:${appcompatVersion}",
+            material                  : "com.google.android.material:material:${materialVersion}",
+            constraintlayout          : "androidx.constraintlayout:constraintlayout:${constraintLayoutVersion}",
+            navigation_fragment_ktx   : "androidx.navigation:navigation-fragment-ktx:${navigationKtVersion}",
+            navigation_ui_ktx         : "androidx.navigation:navigation-ui-ktx:${navigationKtVersion}",
+            navigation_ui             : "androidx.navigation:navigation-ui:${navigationVersion}",
+            navigation_runtime        : "androidx.navigation:navigation-runtime:${navigationVersion}",
+
+            // Kotlin
+            kotlin_stdlib             : "org.jetbrains.kotlin:kotlin-stdlib:${kotlinStdlibVersion}",
+
+            // 协程核心库
+            kotlinx_coroutines_core   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${kotlinxCoroutinesVersion}",
+            // 协程Android支持库
+            kotlinx_coroutines_android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${kotlinxCoroutinesVersion}",
+            // 协程Java8支持库
+            kotlinx_coroutines_jdk8   : "org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:${kotlinxCoroutinesVersion}",
+
+            // lifecycle对于协程的扩展封装
+            lifecycle_viewmodel_ktx   : "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleKtVersion}",
+            lifecycle_runtime_ktx     : "androidx.lifecycle:lifecycle-runtime-ktx:${lifecycleKtVersion}",
+            lifecycle_livedata_ktx    : "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycleKtVersion}",
+
+
+
+            lifecycle_runtime         : "androidx.lifecycle:lifecycle-runtime:${lifecycleVersion}",
+            lifecycle_common_java8    : "androidx.lifecycle:lifecycle-common-java8:${lifecycleVersion}",
+            lifecycle_viewmodel       : "androidx.lifecycle:lifecycle-viewmodel:${lifecycleVersion}",
+            lifecycle_livedata        : "androidx.lifecycle:lifecycle-livedata:${lifecycleVersion}",
+
+            //room
+            room_runtime              : "androidx.room:room-runtime:$room_version",
+            room_complier             : "androidx.room:room-compiler:$room_version",
+            room_rxjava2              : "androidx.room:room-rxjava2:$room_version",
+            room_guava                : "androidx.room:room-guava:$room_version",
+
+            unpeek_livedata           : "com.kunminx.arch:unpeek-livedata:${unPeekLivedataVersion}",
+            strict_databinding        : "com.kunminx.arch:strict-databinding:${strictDataBindingVersion}",
+            rxbinding                 : "com.jakewharton.rxbinding4:rxbinding:${rxBindingVersion}",
+            kotlinx_metadata_jvm      : "org.jetbrains.kotlinx:kotlinx-metadata-jvm:${kotlinxMetadataJvmVersion}",
+    ]
+
+    classPathDependencies = [
+            aspectjtools : "org.aspectj:aspectjtools:${aspectVersion}",
+            aspectjweaver: "org.aspectj:aspectjweaver:${aspectVersion}",
+    ]
+    developmentDependencies = [
+            leakCanary               : "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            recyclerViewAdapterHelper: "com.github.CymChad:BaseRecyclerViewAdapterHelper:${recyclerViewAdapterHelperVersion}",
+    ]
+}

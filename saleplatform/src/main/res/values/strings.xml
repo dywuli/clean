@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">团购平台</string>
+    <string name="title_home">地址</string>
+    <string name="title_orders">订单</string>
+    <string name="title_info">维护信息</string>
+    <string name="payed">已支付</string>
+    <string name="no_payed">未支付</string>
+    <string name="taken">已送达</string>
+    <string name="no_taken">未送达</string>
+    <string name="completed">已完成</string>
+    <string name="uncompleted">未完成</string>
+</resources>

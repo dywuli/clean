@@ -1,0 +1,94 @@
+import org.aspectj.bridge.IMessage
+import org.aspectj.bridge.MessageHandler
+import org.aspectj.tools.ajc.Main
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        def classPathDependencies = rootProject.ext.classPathDependencies
+        classpath classPathDependencies.aspectjtools
+    }
+}
+
+apply plugin: 'com.android.library'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
+
+    def commonLibDependencies = rootProject.ext.commonLibDependencies
+
+    implementation project(':domain')
+    implementation project(':data')
+
+    annotationProcessor commonLibDependencies.daggerCompiler
+    implementation commonLibDependencies.dagger
+    implementation commonLibDependencies.aspectjrt
+    api commonLibDependencies.dagger_android
+    api commonLibDependencies.dagger_android_support
+    annotationProcessor commonLibDependencies.dagger_android_processor
+
+    implementation commonLibDependencies.butterKnife
+    annotationProcessor commonLibDependencies.butterKnife
+
+    implementation commonLibDependencies.recyclerView
+    implementation commonLibDependencies.rxJava
+    implementation commonLibDependencies.rxAndroid
+
+    compileOnly commonLibDependencies.javaxAnnotation
+
+    implementation commonLibDependencies.androidx_core
+    implementation commonLibDependencies.viewPager2
+}
+
+android {
+    compileSdkVersion 33
+    namespace 'com.android.commonlib'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+android.libraryVariants.all { variant ->
+//  LibraryPlugin plugin = project.plugins.getPlugin(LibraryPlugin)
+    JavaCompile javaCompile = variant.javaCompile
+    javaCompile.doLast {
+        String[] args = ["-showWeaveInfo",
+                         "-1.8",
+                         "-inpath", javaCompile.destinationDir.toString(),
+                         "-aspectpath", javaCompile.classpath.asPath,
+                         "-d", javaCompile.destinationDir.toString(),
+                         "-classpath", javaCompile.classpath.asPath,
+                         "-bootclasspath", project.android.bootClasspath.join(File.pathSeparator)]
+
+        MessageHandler handler = new MessageHandler(true);
+        new Main().run(args, handler)
+
+        def log = project.logger
+        for (IMessage message : handler.getMessages(null, true)) {
+            switch (message.getKind()) {
+                case IMessage.ABORT:
+                case IMessage.ERROR:
+                case IMessage.FAIL:
+                    log.error message.message, message.thrown
+                    break;
+                case IMessage.WARNING:
+                case IMessage.INFO:
+                    log.info message.message, message.thrown
+                    break;
+                case IMessage.DEBUG:
+                    log.debug message.message, message.thrown
+                    break;
+            }
+        }
+    }
+}

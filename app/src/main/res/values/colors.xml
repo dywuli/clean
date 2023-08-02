@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="setting_left_title_item_bg_start_color">#ffffffff</color>
+    <color name="setting_left_title_item_bg_end_color">#00ffffff</color>
+
+    <color name="setting_title_selected_indicator_color">#FF0084FF</color>
+    <color name="setting_title_unselected_indicator_color">#FFDCE0E7</color>
+    <color name="setting_ai_voicer_root_bg_color">#FFDCE0E7</color>
+    <color name="setting_ai_voice_tips_bg_color">#0F000000</color>
+    <color name="setting_common_parent_bg_color">#FFDCE0E7</color>
+    <color name="setting_common_stub_bg_color">#CCFFFFFF</color>
+    <color name="setting_title_item_indicator_color">#0084FF</color>
+    <color name="setting_title_item_txt_select_color">#FF000000</color>
+    <color name="setting_title_item_txt_unselect_color">#80000000</color>
+
+    <color name="setting_common_group_bg_color">#0F000000</color>
+    <color name="setting_common_btn_unselect_bg_color">#0F000000</color>
+    <color name="setting_common_btn_select_bg_color">#FF0084FF</color>
+
+    <color name="setting_common_seekbar_unselect_bg_color">#0F000000</color>
+    <color name="setting_common_seekbar_select_bg_color">#FF0084FF</color>
+    <color name="setting_common_seekbar_thumb_bg_color">#FFFFFFFF</color>
+
+    <color name="setting_common_txt_select_color">#FFFFFFFF</color>
+    <color name="setting_common_txt_unselect_color">#FF000000</color>
+    <color name="setting_common_txt_color">#FF000000</color>
+    <color name="setting_common_txt_gray_color">#80000000</color>
+    <color name="setting_common_tips_txt_color">#80000000</color>
+    <color name="setting_cardview_bg_white">#CCFFFFFF</color>
+    <color name="setting_seat_pos_name_edit_dialog_bg_color">#FFFFFFFF</color>
+
+    <color name="setting_sound_effect_volume">#FFE5E5E5</color>
+    <color name="setting_sound_effect_thumb">#FF0084FF</color>
+    <color name="setting_sound_effect_volume_text">#FF727272</color>
+    <color name="setting_blu_bg">#DCE0E7</color>
+    <color name="reset_round_bg_grey">#FFDCE0E7</color>
+
+    <color name="switch_nomal">#FFC0C0C2</color>
+    <color name="edit_nomal">#0F000000</color>
+    <color name="reset_grey">#0F000000</color>
+    <color name="edit_hint_grey">#33000000</color>
+    <color name="dialog_confirm_color">#FF0084FF</color>
+    <color name="dialog_confirm_color_unable">#800084FF</color>
+    <color name="wheel_selector_little_color">#FF7F7F7F</color>
+
+    <color name="setting_common_dialog_bg_color">#FFFFFFFF</color>
+
+    <color name="voice_free_speak_item_bg_color">#05000000</color>
+
+    <color name="cancle_bottom">#0F000000</color>
+
+    <color name="dialog_parent_bg_color">#B3000000</color>
+
+    <color name="setting_seat_btn_bg_color">#0F000000</color>
+    <color name="setting_line">#1A000000</color>
+    <color name="setting_nv_car_light_bg_start_color">#00c3d2f2</color>
+    <color name="setting_nv_car_light_bg_end_color">#cddbf3</color>
+    <color name="setting_nv_car_light_bg_center_color">#83c3d5f5</color>
+    <color name="setting_common_btn_gray_color">#0F000000</color>
+    <color name="setting_common_dialog_warning_color">#FFFF5900</color>
+    <color name="screen_brightness_buttong_color">#FFFFFFFF</color>
+    <color name="setting_sound_effect_reset_color">#FFE5E5E5</color>
+
+    <color name="settings_wifiap_scannum_tx_color">#80000000</color>
+    <color name="setting_ambient_txt_color">#FFFFFFFF</color>
+
+
+    <color name="nv_theme100">#FF0084ff</color>
+    <color name="nv_theme85">#D90084FF</color>
+    <color name="nv_theme50">#800084FF</color>
+
+    <color name="nv_btn_bg100">#10000000</color>
+    <color name="nv_btn_bg85">#0A000000</color>
+    <color name="nv_btn_bg50">#08000000</color>
+
+
+    <color name="nv_black_text_100">#FFFFFFFF</color>
+    <color name="nv_black_text_85">#D9FFFFFF</color>
+    <color name="nv_black_text_50">#80FFFFFF</color>
+
+    <color name="nv_white_text_100">#FF000000</color>
+    <color name="nv_white_text_85">#D9000000</color>
+    <color name="nv_white_text_50">#80000000</color>
+
+
+
+
+    <color name="nv_ambientligint_white">#ffffff</color>
+    <color name="nv_ambientligint_y">#ffd147</color>
+    <color name="nv_ambientligint_o">#ff7762</color>
+    <color name="nv_ambientligint_p">#ff009c</color>
+    <color name="nv_ambientligint_s">#be4cea</color>
+    <color name="nv_ambientligint_sb">#3368f2</color>
+    <color name="nv_ambientligint_b">#00d8ff</color>
+    <color name="nv_ambientligint_g">#25eca5</color>
+    <color name="nv_gray_bg">#dce0e7</color>
+    <color name="nv_ambient_white_color_bg">#dce0e7</color>
+    <color name="nv_black">#FF000000</color>
+    <color name="nv_black_alpha10">#1A000000</color>
+    <color name="nv_black_alpha15">#26000000</color>
+    <color name="nv_black_alpha15_constant">#26000000</color>
+    <color name="nv_black_alpha2">#05000000</color>
+    <color name="nv_black_alpha20">#33000000</color>
+    <color name="nv_black_alpha30">#4D000000</color>
+    <color name="nv_black_alpha40_constant">#66000000</color>
+    <color name="nv_black_alpha50">#80000000</color>
+    <color name="nv_black_alpha6">#0F000000</color>
+    <color name="nv_black_alpha60">#99000000</color>
+    <color name="nv_black_alpha60_constant">#99000000</color>
+    <color name="nv_black_alpha80_constant">#CC000000</color>
+</resources>

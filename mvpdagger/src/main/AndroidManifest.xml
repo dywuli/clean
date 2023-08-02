@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:name=".clean.sample.presentation.AndroidApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ktapp">
+<!--        <activity-->
+<!--            android:name=".MainActivity"-->
+<!--            android:exported="true"-->
+<!--            android:label="@string/app_name"-->
+<!--            android:theme="@style/Theme.Ktapp.NoActionBar">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--        </activity>-->
+        <service
+            android:name=".di.test.TestDiService"
+            android:enabled="true"
+            android:exported="false"></service>
+
+        <activity
+            android:name=".di.test.TestDiMainActivity"
+            android:exported="false"
+            android:label="TestDiMainActivity" />
+        <activity
+            android:name=".di.test.TestDiMvpActivity"
+            android:exported="false"
+            android:label="TestDiMvpActivity" />
+
+        <activity
+            android:name=".clean.sample.presentation.view.activity.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".clean.sample.presentation.view.activity.UserListActivity"
+            android:exported="false"
+            android:label="@string/activity_title_user_list"></activity>
+
+        <activity
+            android:name=".clean.sample.presentation.view.activity.UserDetailsActivity"
+            android:exported="false"
+            android:label="@string/activity_title_user_details"></activity>
+    </application>
+
+</manifest>
